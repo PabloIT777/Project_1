@@ -1,0 +1,1556 @@
+*
+  box-sizing: border-box
+  outline: none
+  
+a
+  text-decoration: none
+  color: inherit
+
+a, button
+  cursor: pointer
+input, button
+  border: none
+  padding: 0
+  background: none
+  
+p, ul, h1, h2, h3, h4, h5, h6, ol
+  padding: 0
+  margin: 0
+  font-weight: normal
+
+ul, ol
+  list-style: none
+button, input
+  display: inline-block
+  
+body
+  font-family: Gilroy, Helvetica, sans-serif
+  background-color: #fff
+  margin: 0
+
+@mixin Font
+  font-family: PT Serif 
+  
+
+// HEADER
+.header
+  padding-bottom: 230px
+  background-image: url(../img/first/first-bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top center
+  color: #fff
+
+  &-top
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+    padding-top: 25px
+    padding-bottom: 25px
+    text-align: center
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 5
+    transition: all 0.3s
+    &.fixed
+      background-color: rgba(0,0,0,0.95)
+      border-color: transparent
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3)
+      transition: all 0.3s
+
+    &__img
+      display: block
+      height: 37px
+    
+    &-contact
+      display: inline-flex
+      align-items: center
+      margin-right: 28px
+        
+      &__img
+        display: inline-block
+        width: 15px
+        height: 15px
+        margin-right: 10px
+              
+      &__link
+        font-size: 18px
+        line-height: 21px
+        line-height: 1.2
+        transition: color 0.3s
+        &:hover
+          transition: color 0.3s
+          color: #FFB75E
+
+                    
+    &__btn
+      border: 1px solid #FFB75E
+      border-radius: 9999px
+      padding-top: 16px
+      padding-bottom: 16px
+      padding-left: 28px
+      padding-right: 28px
+      font-size: 18px
+      line-height: 1
+      text-align: center
+      color: #fff
+      transition: background-color 0.2s, color 0.2s
+      &:hover
+        background-color: #df9a05
+        color: #000
+        transition: background-color 0.2s, color 0.2s
+      &:active
+        background-color: #ad7600  
+                          
+  &-bottom
+    padding-top: 200px
+                            
+    &__title
+      font-size: 38px
+      text-transform: uppercase
+      line-height: 1.5
+      font-family: PT Serif                          
+      &--bold
+        font-weight: 700
+                                              
+    &-stock
+      margin-top: 68px
+      border-left: 4px solid #FFB75E
+      padding-left: 25px
+      padding-top: 5px
+      padding-bottom: 5px
+      display: inline-block
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        display: inline-block
+        background-size: contain
+        height: 107px
+        width: 78px
+        left: 420px
+        top: -29px
+        background-image: url(../img/first/arrow-icon.svg) 
+        opacity: 0.3
+                                          
+      &__title
+        font-size: 24px
+        line-height: 1
+        font-weight: 700
+        margin-bottom: 15px
+        font-family: PT Serif
+      &__desc
+        font-size: 16px
+        line-height: 1.5
+        color: #DFDFDF                                                
+    &-features
+      margin-top: 72px
+                                                    
+      &-card
+        display: inline-flex
+        align-items: center
+        margin-right: 100px
+                                                          
+        &:nth-child(1)
+          display: flex
+          margin-bottom: 44px
+                                                                  
+        &__img
+          display: inline-block
+          width: 60px
+          height: 60px
+          margin-right: 25px
+                                                                          
+        &__title
+          font-size: 18px
+          line-height: 1.5
+                                                                                  
+    &-offer
+      box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3)
+      border-radius: 10px
+      background: rgba(0, 0, 0, 0.65)
+      padding-top: 38px
+      padding-bottom: 50px
+      padding-left: 35px
+      padding-right: 35px
+      color: #FFFFFF
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        display: block
+        top: 15px
+        bottom: 15px
+        left: 15px
+        right: 15px
+        background: transparent
+        border-radius: 10px
+        border: 1px solid rgba(255, 255, 255, 0.25)
+                                                                                      
+      &__title
+        text-align: center
+        font-size: 26px
+        line-height: 1.4
+        margin-bottom: 5px
+        font-family: PT Serif
+        color: #FFFFFF
+        position: relative
+        z-index: 2                                                                                      
+      &__subtitle
+        color: #DFDFDF
+        text-align: center
+        line-height: 1.5
+        font-size: 16px
+        z-index: 2
+        position: relative
+                                                                                                      
+      &-form
+        margin-top: 25px
+        display: flex
+        flex-direction: column
+        z-index: 2
+        position: relative
+        &-wrap
+          position: relative
+          &::after
+            position: absolute
+            content: ''
+            display: inline-block
+            width: 15px
+            height: 15px
+            background-image: url(../img/first/form-user-icon.svg)
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            left: 13px
+          &__input
+            margin-bottom: 20px
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+            padding-bottom: 13px
+            padding-left: 40px
+            text-transform: uppercase
+            color: #fff
+            width: 100%
+          &:nth-child(2)
+            &::after
+              background-image: url(../img/first/form-telefone-icon.svg)
+        &-cover
+          padding-left: 40px
+          cursor: pointer
+          &__file
+          &__title
+            font-size: 14px
+            line-height: 14px
+            color: #A3A3A3
+            position: relative
+            &::after
+              position: absolute
+              content: ''
+              width: 20px
+              height: 20px
+              left: -30px
+              top: -4px
+              background-image: url(../img/first/form-file-icon.svg)
+            &--orange
+              font-size: 16px
+              line-height: 16px
+              color: #FFB75E
+        &__btn
+          background: linear-gradient(180deg, #FFB75E 0%, #ED8F03 100%)
+          box-shadow: 0px 3px 0px #C67702
+          border-radius: 9999px
+          padding-top: 14px
+          padding-bottom: 14px
+          color: #fff
+          text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35)
+          line-height: 1.2
+          font-size: 16px
+          font-weight: 700
+          margin-top: 20px
+          margin-bottom: 20px
+          transition: box-shadow 0.3s
+          &:hover
+            box-shadow: unset
+            transition: box-shadow 0.3s
+        &-wrapper
+          width: 100%
+          display: flex
+          align-items: center
+          &__checkbox
+            display: inline-flex
+            width: 15px
+            height: 15px
+            align-items: center
+            justify-content: center
+            background-color: rgba(255, 255, 255, 0.25)
+            position: relative
+            cursor: pointer
+            margin-right: 10px
+            &::after
+              content: ''
+              display: none
+              position: absolute
+              width: 9px
+              height: 9px
+              background-image: url(../img/first/form-check-icon.svg)
+              color: #fff
+          &__desc
+            font-size: 13px
+            display: inline-block
+          &__link
+            text-decoration: underline
+            display: inline-block
+            font-size: 13px
+            display: inline-block
+
+.header-bottom-offer-form-wrapper__checkbox--hidden:checked + .header-bottom-offer-form-wrapper__checkbox::after
+  display: inline-block                                                                                                                                   
+.why
+  padding-top: 103px
+  padding-bottom: 60px
+  &__title
+    margin-bottom: 70px
+    text-align: center
+    @include Font
+    font-size: 45px
+    line-height: 130%
+    color: #0F0F0F  
+    &--orange
+      font-weight: bold
+      color: #FFB75E             
+  &-cards
+    &-advantage
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 60px 
+      &__img
+        width: 100px
+        height: 100px  
+      &__title
+        font-weight: 500
+        font-size: 18px
+        line-height: 150%
+        margin-left: 25px
+.product
+  padding-top: 96px
+  padding-bottom: 100px
+  &__title
+    margin-bottom: 70px
+    text-align: center
+    @include Font
+    font-size: 45px
+    line-height: 130%
+    color: #0F0F0F  
+  &-demonstration
+    position: relative
+    height: 250px
+    display: flex
+    align-items: flex-end
+    padding-bottom: 22px
+    padding-left: 30px
+    padding-right: 20px
+    margin-bottom: 30px
+    overflow: hidden
+    border-radius: 5px
+    &__img
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      z-index: 1
+      width: 370px
+      height: 250px
+      width: 100%
+      height: 100%
+      object-fit: cover
+      filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.15))
+      transition: transform 0.4s
+    &-wrap
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      width: 100%
+      &__title
+        font-weight: bold
+        font-size: 28px
+        line-height: 130%
+        color: #FFFFFF
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)        
+      &__link
+        border: 2px solid #FFFFFF
+        border-radius: 50%
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        &__img
+          padding-right: 15px
+          padding-bottom: 12px
+          transition: transform 0.4s
+
+.product-demonstration:hover .product-demonstration__img
+  transform: scale(1.1)
+  transition: transform 0.4s
+.choice
+  padding-top: 120px
+  padding-bottom: 120px
+  .choice-table
+    .col-lg-3
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      border-top: 1px solid #EEEEEE
+      border-left: 1px solid #EEEEEE
+      padding-top: 17px
+      padding-bottom: 17px
+      &:nth-child(-n+4)
+        border-top: none
+      &:nth-child(4n+1)
+        justify-content: flex-start
+        border-left: none
+  &__title
+    text-align: center
+    @include Font
+    font-size: 45px
+    line-height: 130%
+    color: #0F0F0F
+    &--orange
+      font-weight: bold
+      color: #FFB75E 
+  &__subtitle
+    border-left: 4px solid #FFB75E
+    padding-left: 16px
+    margin-bottom: 50px
+    margin-top: 100px
+    font-weight: bold
+    font-size: 26px
+    line-height: 150%
+    color: #0F0F0F
+  &__material
+    font-size: 20px
+    line-height: 150%
+  &__property
+    font-size: 20px
+    line-height: 150%
+    &--bold
+      font-weight: bold
+  &__open
+    display: flex
+  &__closed
+  &-pinks
+    background: #FFFFFF
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    padding: 16px 22px
+    position: relative
+    &__img
+      display: inline-block
+      width: 100%
+    &__number
+      font-size: 26px
+      line-height: 100%
+      color: #FFB75E
+      font-weight: bold
+      position: absolute
+      bottom: 16px
+      left: 30px
+  &-edges
+    display: flex
+    flex-wrap: wrap
+    &-edge
+      background: #FFFFFF
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+      border-radius: 10px
+      margin-right: 30px
+      margin-bottom: 30px
+      padding: 17px 26px
+      position: relative
+      &__img
+        width: 158px        
+      &__number
+        color: #FFB75E
+        font-size: 22px
+        line-height: 100%
+        font-weight: bold
+        position: absolute
+        bottom: 10px
+        left: 13px
+  &-plinths
+    display: inline-flex
+    background: #FFFFFF
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    padding: 30px
+    position: relative
+    &__img
+      width: 100%
+    &__form
+      font-weight: bold
+      font-size: 20px
+      line-height: 150%
+      position: absolute
+      top: 30px
+      right: 30px
+      &--grey
+        color: #444444
+      &--liquid
+        color: #444444
+        font-weight: normal
+        font-size: 16px
+  &__btn
+    display: block
+    margin: 0 auto
+    margin-top: 70px
+    background: linear-gradient(180deg, #FFB75E 0%, #ED8F03 100%)
+    box-shadow: 0px 3px 0px #C67702
+    border-radius: 9999px
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 50px
+    padding-right: 50px
+    font-weight: bold
+    font-size: 16px
+    line-height: 120%
+    color: #FFFFFF
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35)
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: unset
+      transition: box-shadow 0.3s
+.promotion
+  background-image: url(../img/promotion/square-bg.png)
+  background-repeat: no-repeat 
+  background-size: cover
+  background-position: center center
+  padding-top: 100px
+  padding-bottom: 100px
+  &--second
+    background-image: url(../img/promotion/square-bg-second.png)
+  &__title
+    font-family: PT Serif
+    font-size: 45px
+    line-height: 130%
+    color: #000000
+    &--orange
+      color: #FFB75E
+      font-weight: bold       
+  &-stock
+    display: flex
+    align-items: center
+    margin-top: 21px
+    margin-bottom: 25px
+    &__img
+      display: inline-block
+      width: 60px
+      height: 60px
+    &__title
+      margin-left: 25px
+      font-size: 20px
+      line-height: 150%
+      color: #444444
+  &-timer
+    &__subtitle
+      font-size: 22px
+      line-height: 150%
+      color: #000000
+      font-weight: bold
+    &__number
+      font-weight: bold
+      font-size: 96px
+      line-height: 100%
+      color: #FFB75E
+    &-wrap
+      &__number
+        font-size: 16px
+        line-height: 130%
+        color: #A3A3A3
+        margin-right: 52px
+        margin-left: 37px
+.examples
+  padding-top: 120px
+  padding-bottom: 120px
+  &__title
+    text-align: center
+    font-family: PT Serif
+    font-size: 45px
+    line-height: 130%
+    margin-bottom: 80px
+  &-buttons
+    display: flex
+    justify-content: space-between
+    &__button
+      font-size: 18px
+      line-height: 150%
+      color: #000000
+      padding: 10px 20px
+      transition: background 0.4s
+      &.active
+        background: #FFB75E
+        border-radius: 5px
+        transition: background 0.4s
+      &:hover
+        background: #FFB75E
+        transition: background 0.4s
+  &-cases
+    margin-top: 60px
+    &-case
+      &:not(:first-child)
+        display: none
+      &__link
+        position: relative
+        z-index: 3
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        margin-bottom: 30px
+        height: calc( 100% - 30px )
+        &::after
+          position: absolute
+          content: ''
+          display: inline-block
+          background: #FFB75E
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          opacity: 0
+          transition: opacity 0.4s
+          z-index: 2
+        &::before
+          position: absolute
+          content: ''
+          display: inline-block
+          width: 50px
+          height: 50px
+          background-image: url(../img/example/zoom-icon.svg)
+          z-index: 3
+          opacity: 0
+          transition: opacity 0.4s    
+      &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: relative
+                   
+.examples-cases-case__link:hover::after
+  opacity: 0.8
+  transition: opacity 0.4s
+.examples-cases-case__link:hover::before
+  opacity: 1
+  transition: opacity 0.4s
+.customers
+  background-image: url(../img/clients/clients-bg-img.png)
+  padding-bottom: 100px
+  padding-top: 100px
+  &__title
+    margin-bottom: 70px
+    text-align: center
+    font-size: 45px
+    line-height: 130%
+    font-family: PT Serif
+    color: #0F0F0F 
+  &-cards
+    display: flex
+    justify-content: space-between
+    &-card
+      display: flex
+      flex-direction: column
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 180px
+        height: 180px
+        background: #FFB75E
+        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1)
+        border-radius: 10px
+        transform: rotate(-10.46deg)
+        top: 0
+      &__img
+        display: inline-block
+        width: 180px
+        height: 180px
+        border-radius: 10px
+        margin-bottom: 35px
+        object-fit: cover
+        object-position: right
+        position: relative
+        z-index: 2        
+      &__title
+        font-size: 22px
+        line-height: 150%
+        color: #0F0F0F
+        font-weight: bold
+        text-align: center
+.features
+  padding-top: 120px
+  padding-bottom: 20px
+  .flex-row-reverse
+    .features-block-card
+      margin-left: 80px
+  &__title
+    text-align: center
+    font-size: 45px
+    line-height: 130%
+    font-family: PT Serif
+    color: #0F0F0F
+    margin-bottom: 70px
+    &--orange
+      color: #FFB75E
+      font-weight: bold
+  &-block
+    margin-bottom: 100px
+    &-card
+      width: 90%
+      margin-bottom: 50px
+      display: flex
+      align-items: center
+      border: 1px solid #FFB75E
+      padding: 19px
+      position: relative
+      &::after
+        display: inline-block
+        content: ''
+        width: 1px
+        height: 100px
+        background: #fff
+        position: absolute
+        left: -1px
+      &:last-child
+        margin-bottom: 0
+      &__number
+        font-weight: bold
+        font-size: 64px
+        line-height: 100%
+        color: #FFB75E
+        position: absolute
+        left: -35px
+        z-index: 2
+      &-wrap        
+        background: #F8F8F8
+        width: 100%
+        padding-top: 17px
+        padding-bottom: 21px
+        padding-left: 44px
+        padding-right: 52px
+        &__title
+          font-weight: bold
+          font-size: 22px
+          line-height: 150%
+          color: #0F0F0F
+        &__subtitle
+          font-weight: normal
+          font-size: 16px
+          line-height: 150%
+          color: #444444
+    &__bracket
+      font-weight: 300
+      font-size: 300px
+      line-height: 100%
+      color: #FFB75E
+      margin: 0 auto
+    &__cause
+      font-weight: bold
+      font-size: 72px
+      line-height: 100%
+      margin-bottom: 30px
+      color: #FFB75E
+      text-align: center
+      &--transparend
+        color: #fff
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: #f5f5f5
+      &--grey
+        color: #F8F8F8  
+.guarantees
+  padding-top: 120px
+  padding-bottom: 90px
+  &__title
+    text-align: center
+    font-family: PT Serif
+    font-size: 45px
+    line-height: 130%
+    text-transform: uppercase
+    color: #0F0F0F
+    margin-bottom: 70px
+  &-card
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background: #FFFFFF
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    padding-left: 30px
+    margin-bottom: 30px
+    padding-right: 30px
+    height: 370px
+    &__img
+      width: 70px
+      height: 70px
+      margin-bottom: 15px
+      z-index: 2
+    &__title
+      margin-bottom: 10px
+      z-index: 2
+      font-weight: bold
+      font-size: 22px
+      line-height: 150%
+      color: #0F0F0F
+    &__subtitle
+      z-index: 2
+      font-size: 16px
+      line-height: 150%
+      color: #444444
+    &__img-bg
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      width: 310px
+    &--orangebg
+      background: #FFB75E
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+      border-radius: 10px
+.reviews
+  padding-top: 100px
+  padding-bottom: 100px
+  background-image: url(../img/reviews-bg-img.png)
+  background-repeat: no-repeat 
+  background-size: cover
+  background-position: center center
+  &__title
+    font-family: PT Serif
+    font-style: normal
+    font-size: 45px
+    line-height: 130%
+    text-align: center
+    color: #0F0F0F
+    margin-bottom: 70px
+    &--orange
+      color: #FFB75E
+      font-weight: bold
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev
+  color: #FFB75E
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span
+  font-size: 40px
+.owl-theme .owl-nav [class*=owl-]:hover
+  background: transparent
+  color: #FFB75E
+  opacity: 0.5    
+.owl-theme .owl-dots .owl-dot span
+  background: transparent
+  border: 1px solid #FFB75E        
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+  background: #FFB75E
+.answers
+  padding-top: 120px
+  padding-bottom: 120px
+  &__title
+    font-family: PT Serif
+    font-style: normal
+    font-size: 45px
+    line-height: 130%
+    text-align: center
+    color: #0F0F0F
+    text-transform: uppercase
+    margin-bottom: 70px
+    &--orange
+      color: #FFB75E
+      font-weight: bold
+  &-list
+    &-card
+      margin-bottom: 20px
+      &-top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__title
+          font-size: 22px
+          line-height: 150%
+          color: #0F0F0F
+      &-bottom
+        padding-top: 10px
+        display: none
+        &__desc
+          font-size: 16px
+          line-height: 150%
+          color: #444444
+
+.answers-list-card-top.active .answers-list-card-top__img
+  transform: rotate(90deg)         
+.contact
+  &__title
+    font-family: PT Serif
+    font-style: normal
+    font-weight: normal
+    font-size: 45px
+    line-height: 130%
+    text-align: center
+    text-transform: uppercase
+    color: #0F0F0F
+    margin-bottom: 70px
+  &-card
+    &-icon
+      background: #F8F8F8
+      border-radius: 50%
+      width: 70px
+      height: 70px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 15px
+      &__img
+        display: inline-block
+        width: 30px
+        height: 30px
+    &__title
+      margin-bottom: 6px
+      font-weight: bold
+      font-size: 22px
+      line-height: 150%
+      color: #0F0F0F
+    &__link
+      font-size: 18px
+      line-height: 150%
+      color: #0F0F0F
+      transition: color 0.3s
+      &:hover
+        transition: color 0.3s
+        color: #FFB75E
+    &__subtitle
+      font-size: 18px
+      line-height: 150%
+      color: #0F0F0F
+  &-map
+    padding-top: 100px
+    display: flex
+    justify-content: center
+    &__img
+      width: 100%
+      height: 400px
+      object-fit: cover
+.footer
+  background: #FFB75E
+  padding: 17px 0px
+  font-size: 16px
+  line-height: 100%
+  &__slogan
+    font-size: 16px
+  &-wrap
+    text-align: center
+    &__link
+      border-bottom: 1px solid #000
+      font-style: normal
+      font-weight: normal
+      transition: border-color 0.3s
+      font-size: 16px
+      &:hover
+        transition: border-color 0.3s
+        border-color: transparent
+
+  &__copyright
+    font-size: 16px
+.popup-container
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 10
+  display: none
+.popup-overlay
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0, 0, 0, 0.5)
+  cursor: pointer
+.popup
+  position: relative
+  display: inline-block
+  width: 340px
+  background: #fff
+  border-radius: 5px
+  z-index: 2
+  padding: 30px 15px
+  &__close
+    position: absolute
+    display: inline-block
+    background-image: url(../img/form-close-icon.svg)
+    width: 15px
+    height: 15px
+    top: 10px
+    right: 10px
+    border: none
+  &__title
+    margin-top: 15px
+    text-align: center
+    font-size: 18px
+    font-weight: bold
+  &-form
+    margin-top: 40px
+    display: flex
+    flex-direction: column
+    &__input
+      border-bottom: 1px solid rgba(0,0,0,.3)
+      padding: 10px 20px
+      margin-bottom: 20px
+    &__submit
+      border-radius: 999px
+      padding: 10px 20px
+      margin-top: 20px
+      display: inline-block
+      border: 1px solid orange
+      transition: background-color 0.2s, color 0.2s
+      &:hover
+        background-color: #df9a05
+        color: #000
+        transition: background-color 0.2s, color 0.2s
+
+@media ( max-width: 1199px )
+  .header
+    padding-bottom: 150px
+    &-top
+      &-contact
+        margin-bottom: 10px
+    &-bottom
+      &__title
+        font-size: 33px
+      &-offer
+        margin-top: 50px
+        &__title
+          font-size: 20px
+        &__subtitle
+          font-size: 14px
+        &-form
+          &-wrapper
+            &__desc
+              font-size: 14px
+            &__link
+              font-size: 14px
+  .why
+    &__title
+      font-size: 33px
+    &-cards
+      &-advantage
+        &__img
+          width: 80px
+          height: 80px
+  .product
+    &__title
+      font-size: 33px
+    &-demonstration
+      height: 230px
+      &-wrap
+        &__title
+          font-size: 20px
+        &__link
+          width: 35px
+          height: 35px
+  .choice
+    &__title
+      font-size: 33px
+    &__subtitle
+      font-size: 24px
+  .promotion__title
+    font-size: 33px
+  .customers__title
+    font-size: 33px  
+  
+  .choice-edges-edge__img
+    width: 150px
+  .choice-plinths__form
+    font-size: 18px
+    &--liquid
+      font-size: 14px
+  .customers-cards
+    flex-wrap: wrap
+    justify-content: center
+    &-card
+      margin-bottom: 40px
+      margin-right: 25px
+      margin-left: 25px
+  .features
+    .flex-row-reverse
+      .features-block-card
+        margin-left: 0px
+    &__title
+      font-size: 33px
+    &-block
+      &-card
+        width: 95%
+        &-wrap
+          &__title
+            font-size: 20px
+          &__title br
+            display: none
+          &__subtitle
+            font-size: 14px
+          &__subtitle br
+            display: none
+      &__bracket
+        font-size: 200px
+      &__cause
+        font-size: 50px
+  .guarantees
+    &__title
+      font-size: 33px
+    &-card
+      &__img-bg
+        width: 270px
+      &__title
+        font-size: 20px
+      &__title br
+        display: none
+      &__subtitle br
+        display: none
+  .reviews
+    &__title
+      font-size: 33px
+  .answers
+    &__title
+      font-size: 33px
+  .contact
+    &__title
+      font-size: 33px
+    &-card
+      &__link
+        font-size: 16px
+      &__subtitle
+        font-size: 16px
+    &-map
+      &__img
+        height: 300px
+  .footer
+    &__slogan
+      font-size: 14px
+    &-wrap
+      &__link
+        font-size: 14px
+    &__copyright
+      font-size: 14px
+
+@media ( max-width: 991px )
+  .header
+    padding-bottom: 80px
+    &-top
+      &__img
+        display: inline-block
+        width: 200px
+        height: 30px
+        margin-bottom: 15px
+      &-contact
+        margin-bottom: 15px
+  .header-bottom-offer
+    margin-top: 60px
+    max-width: 60%
+  .product
+    padding-top: 50px
+    padding-bottom: 50px
+  
+  .choice
+    padding-top: 50px
+    padding-bottom: 50px
+    &__subtitle
+      font-size: 20px
+    &__material
+      font-size: 16px
+      text-align: center
+    &__property
+      font-size: 16px
+
+  .choice-pinks
+    padding: 20px 30px
+    margin-bottom: 20px
+
+  .choice-edges-edge
+    margin-right: 22px
+
+  .promotion
+    padding-top: 70px
+    padding-bottom: 70px
+    .header-bottom-offer
+      margin-left: auto
+      margin-right: auto
+    text-align: center
+    &-stock
+      justify-content: center
+      &__title
+        font-size: 18px
+        text-align: left
+  .customers
+    padding-top: 50px
+    padding-bottom: 50px
+  .choice-plinths
+    margin-bottom: 30px
+  .features
+    padding-top: 50px
+    &-block
+      margin-bottom: 50px
+      &-card
+        width: 100%
+        &-wrap
+          padding-right: 44px        
+      &__bracket
+        display: none
+      &__cause
+        display: none
+  .guarantees
+    padding-top: 50px
+    padding-bottom: 50px
+  .reviews
+    padding-top: 50px
+    padding-bottom: 50px
+  .answers
+    padding-top: 50px
+    padding-bottom: 50px
+  .contact
+    &-card
+      margin-bottom: 30px
+      &__subtitle
+      &__subtitle br
+        display: none
+  .footer
+    &__slogan
+      text-align: center
+    &__link
+      margin-top: 15px
+      margin-bottom: 15px
+    &__copyright
+      text-align: center    
+
+@media ( max-width: 767px )
+  .header-bottom
+    &__title
+      font-size: 26px
+    &__title br
+      display: none
+    &-stock  
+      &__title
+        font-size: 20px
+      &__desc
+        font-size: 14px
+      &::after
+        display: none
+    &-offer
+      max-width: 100%
+    &-features-card
+      margin-right: 50px
+    &-offer-form__btn
+      font-size: 13px
+  .why
+    &__title
+      font-size: 26px
+    &-cards
+      &-advantage
+        &__img
+          width: 80px
+          height: 80px
+        &__title
+          font-size: 14px
+  .product
+    &__title
+      font-size: 26px
+    &-demonstration
+      height: 200px
+      padding-left: 20px
+      &-wrap
+        &__title
+          font-size: 18px
+        &__link
+          width: 30px
+          height: 30px 
+  .choice
+    &__title
+      font-size: 26px
+    &__title br
+      display: none
+    &__subtitle
+      font-size: 18px
+    &__material
+      font-size: 14px
+      text-align: center
+    &__property
+      font-size: 14px
+    &__open
+      width: 30px
+      height: 30px
+    &__closed
+      width: 30px
+      height: 30px
+    &-plinths
+      margin-bottom: 20px
+      &__form
+        right: 15px
+        top: 20px
+        font-size: 16px
+        &--liquid
+          font-size: 14px
+  .promotion
+    &__title
+      font-size: 26px
+    &-stock
+      &__img
+        width: 45px
+        height: 45px
+      &__title
+        font-size: 16px
+    &__suptitle
+      font-size: 18px
+  .customers
+    &__title
+      font-size: 26px
+    &-cards
+      &-card
+        &__img
+          width: 140px
+          height: 140px
+          margin-bottom: 25px
+        &::after
+          width: 140px
+          height: 140px
+        &__title
+          font-size: 18px
+  .features
+    &__title
+      font-size: 26px
+    &-block
+      margin-bottom: 0
+      &-card
+        width: 100%
+        padding: 10px
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 30px
+        &::after
+          height: 65px
+        &__number
+          font-size: 40px
+          left: -23px
+        &-wrap
+          padding-left: 30px
+          padding-right: 30px
+          &__title
+            font-size: 18px
+  .guarantees
+    &__title
+      font-size: 26px
+    &-card
+      height: 300px
+  .reviews
+    &__title
+      font-size: 26px
+  .answers
+    &__title
+      font-size: 26px
+  .contact
+    &__title
+      font-size: 26px
+    &-card
+      &__subtitle
+        font-size: 14px
+        text-align: center
+    &-map
+      padding-top: 30px
+      &__img
+
+@media ( max-width: 574px )
+  .header
+    padding-bottom: 50px
+    &-top
+      &__img
+        width: 200px
+      &-contact
+        &__link
+          font-size: 16px
+      &__btn
+        font-size: 14px
+    &-bottom
+      padding-top: 200px
+      &__title
+        font-size: 20px
+      &-stock
+        margin-top: 40px
+        &__title
+          font-size: 16px
+      &-features
+        margin-top: 40px
+        &-card
+          margin-right: 35px
+          padding-left: 15px
+          margin-bottom: 30px
+          &:first-child           
+            margin-bottom: 30px
+          &:last-child
+            margin-bottom: 0
+          &__img
+            width: 40px
+            height: 40px
+            margin-right: 15px
+          &__title
+            font-size: 14px
+      &-offer
+        padding-top: 25px
+        padding-bottom: 25px
+        margin-top: 30px
+        max-width: 100%
+        &::after
+          top: 10px
+          bottom: 10px
+          left: 10px
+          right: 10px 
+        &__title
+        &__subtitle
+          font-size: 14px
+        &-form 
+          &-wrap
+            &__input
+              font-size: 14px
+              padding-left: 35px
+            &::after
+              left: 10px
+          &__btn
+            font-size: 14px
+  .why
+    padding-top: 35px
+    padding-bottom: 25px
+    &__title
+      font-size: 20px
+      margin-bottom: 30px
+    &__title br
+      display: none
+    &-cards-advantage
+      max-width: 100%
+      width: 100%
+      margin-bottom: 25px
+      justify-content: start
+      &__title
+        font-size: 16px
+      &__img
+        width: 60px
+        height: 60px
+  .product
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+      font-size: 20px
+      margin-bottom: 30px
+    &-demonstration
+      height: 180px
+      padding-left: 12px
+      padding-right: 12px
+      max-width: 100%
+      width: 100%
+      &-wrap
+        &__title
+          font-size: 18px
+        &__link
+          width: 25px
+          height: 25px
+  .choice
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+      font-size: 20px
+    &__title br
+      display: none
+    &__subtitle
+      font-size: 16px
+      margin-top: 40px
+      margin-bottom: 30px
+    &__material
+      font-size: 14px
+    &__property
+      font-size: 14px
+    &-pinks
+      max-width: 100%
+      width: 100%
+      padding: 15px
+      &__number
+        font-size: 40px
+    &-edges
+      &-edge
+        padding: 20px
+        &__img
+          width: 80px
+    &__btn
+      padding-left: 40px
+      padding-right: 40px
+  .promotion
+    .header-bottom-offer
+      padding: 30px 20px
+    &__title
+      font-size: 24px
+    &-stock
+      &__title
+        font-size: 14px
+    &__subtitle
+      font-size: 18px
+  .promotion-stock__title br    
+    display: none
+  .customers
+    &__title
+      font-size: 25px
+    &-cards
+      &-card
+        &__img
+          width: 140px
+          height: 140px
+          margin-bottom: 25px
+        &::after
+          width: 140px
+          height: 140px
+        &__title
+          font-size: 16px
+  .choice-wrapper
+    overflow-x: scroll
+  .choice-table
+    width: 700px
+  .features
+    &__title br
+      display: none
+    &-block
+      &-card
+        &__number
+          font-size: 30px
+          left: -14px
+        &-wrap
+          padding-top: 10px
+          padding-bottom: 10px
+          padding-left: 25px
+          padding-right: 25px
+          &__title
+          &__subtitle
+  .guarantees
+    &-card
+      padding-left: 20px
+      padding-bottom: 20px
+      padding-right: 20px
+      &__subtitle
+        font-size: 14px
+  .contact
+    &-card
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &-map
+      &__img
+  .footer
+    font-size: 14px
+
+
+          
+        
